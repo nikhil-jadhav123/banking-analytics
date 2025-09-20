@@ -2,7 +2,7 @@
 
 This project is built on the Medallion Architecture, a data engineering design pattern that provides a structured approach for processing data. It organizes data into three distinct layers: Bronze, Silver, and Gold, ensuring data quality, reliability, and accessibility.
 
-<img src="https://github.com/nikhil-jadhav123/banking-analytics/blob/main/docs/Medallion%20Architecture.PNG" alt="Medallion Architecture Diagram" width="700"/>
+<img src="https://github.com/nikhil-jadhav123/banking-analytics/blob/main/docs/Medallion%20Architecture.png" alt="Medallion Architecture Diagram" width="700"/>
 
 Bronze Layer (Raw Data Lake)
 Purpose: This is the entry point for all raw data. It serves as an immutable, append-only historical record.
