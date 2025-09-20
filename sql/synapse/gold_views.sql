@@ -1,0 +1,1 @@
+-- SQL Gold views placeholder

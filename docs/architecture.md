@@ -1,0 +1,3 @@
+# Architecture
+
+Medallion architecture explained.

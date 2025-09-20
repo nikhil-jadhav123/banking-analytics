@@ -1,0 +1,1 @@
+-- SQL Fact Load placeholder

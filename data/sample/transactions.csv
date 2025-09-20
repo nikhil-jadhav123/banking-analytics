@@ -1,0 +1,2 @@
+TransactionID,CustomerID,TransactionDate,Amount
+TRN001,CUST001,2024-01-01,500.00
