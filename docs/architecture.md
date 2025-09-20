@@ -1,8 +1,8 @@
-###Project Architecture###
-Medallion Architecture for Transaction Analytics
+# **Medallion Architecture**
+
 This project is built on the Medallion Architecture, a data engineering design pattern that provides a structured approach for processing data. It organizes data into three distinct layers: Bronze, Silver, and Gold, ensuring data quality, reliability, and accessibility.
 
-!(https://www.google.com/search?q=https://example.com/medallion-architecture-diagram.png)
+!()
 
 Bronze Layer (Raw Data Lake)
 Purpose: This is the entry point for all raw data. It serves as an immutable, append-only historical record.
