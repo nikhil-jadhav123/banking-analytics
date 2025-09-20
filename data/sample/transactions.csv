@@ -1,6 +1,6 @@
 TransactionID,CustomerID,TransactionDate,TransactionTime,TransactionType,Amount,Currency,Description,MerchantName,Location,IsFraudulent
 TRN001,CUST001,2024-01-01,10:30:00,Deposit,500.00,USD,Salary Deposit,,Online,FALSE
 TRN002,CUST002,2024-01-01,11:15:30,Withdrawal,50.00,USD,ATM Withdrawal,,New York NY,FALSE
-TRN003,CUST003,2024-01-02,14:00:00,Payment,120.50,USD,Online Shopping,Amazon,Seattle,WA,FALSE
+TRN003,CUST003,2024-01-02,14:00:00,Payment,120.50,USD,Online Shopping,Amazon,Seattle WA,FALSE
 TRN004,CUST001,2024-01-02,16:45:10,Transfer,200.00,USD,Transfer to Savings,,Online,FALSE
-TRN005,CUST002,2024-01-03,09:00:00,Withdrawal,1500.00,USD,Suspicious large withdrawal,,Miami,FL,TRUE
+TRN005,CUST002,2024-01-03,09:00:00,Withdrawal,1500.00,USD,Suspicious large withdrawal,,Miami FL,TRUE
