@@ -1,2 +1,4 @@
-CustomerID,FirstName,LastName,Email
-CUST001,John,Doe,john@example.com
+CustomerID,FirstName,LastName,Email,Phone,Address,City,State,ZipCode,DateOfBirth,AccountType,OpeningDate
+CUST001,John,Doe,john.doe@example.com,555-1234,123 Main St,Anytown,CA,90210,1985-03-15,Savings,2010-01-20
+CUST002,Jane,Smith,jane.smith@example.com,555-5678,456 Oak Ave,Anytown,CA,90210,1992-07-22,Checking,2015-05-10
+CUST003,Robert,Johnson,rob.j@example.com,555-8765,789 Pine Ln,Otherville,NY,10001,1978-11-01,Credit Card,2018-09-01
