@@ -1,0 +1,13 @@
+{
+  "name": "PL_Transform_Customer_Bronze_To_Silver",
+  "properties": {
+    "activities": [
+      {
+        "name": "Run_DBX_Customer_Silver",
+        "type": "DatabricksNotebook",
+        "typeProperties": { "notebookPath": "/Repos/banking-analytics/databricks/NB_Customer_Bronze_To_Silver" }, // REPLACED <your-repo>
+        "linkedServiceName": { "referenceName": "AzureDatabricks_ls", "type": "LinkedServiceReference" }
+      }
+    ]
+  }
+}
