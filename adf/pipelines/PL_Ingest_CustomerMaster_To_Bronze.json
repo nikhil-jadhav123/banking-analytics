@@ -1,1 +1,18 @@
-{ "name": "PL_Ingest_CustomerMaster_To_Bronze" }
+{
+  "name": "PL_Ingest_CustomerMaster_To_Bronze",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_Customer_Master",
+        "type": "Copy",
+        "dependsOn": [],
+        "typeProperties": {
+          "source": { "type": "DelimitedTextSource" },
+          "sink": { "type": "DelimitedTextSink" }
+        },
+        "inputs": [{ "referenceName": "ds_bronze_customer_master", "type": "DatasetReference" }],
+        "outputs": [{ "referenceName": "ds_sink_customer_bronze", "type": "DatasetReference" }]
+      }
+    ]
+  }
+}
