@@ -1,1 +1,12 @@
-{ "name": "ds_sink_customer_bronze" }
+{
+  "name": "ds_sink_customer_bronze",
+  "properties": {
+    "linkedServiceName": { "referenceName": "AzureStorage_ls", "type": "LinkedServiceReference" },
+    "type": "DelimitedText",
+    "typeProperties": {
+      "location": { "type": "AzureBlobFSLocation", "fileSystem": "bronze", "folderPath": "customer_master_raw" },
+      "columnDelimiter": ",",
+      "firstRowAsHeader": true
+    }
+  }
+
