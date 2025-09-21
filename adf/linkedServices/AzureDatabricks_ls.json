@@ -1,1 +1,11 @@
-{ "name": "AzureDatabricks_ls" }
+{
+    "name": "AzureDatabricks_ls",
+    "properties": {
+        "type": "AzureDatabricks",
+        "typeProperties": {
+            "domain": "https://<region>.azuredatabricks.net", 
+            "workspaceResourceId": "/subscriptions/YOUR_SUBSCRIPTION_ID/resourceGroups/rg-banking-analytics/providers/Microsoft.Databricks/workspaces/adb-banking-analytics-workspace",
+            "authentication": "MSI"
+        }
+    }
+}
