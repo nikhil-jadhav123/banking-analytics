@@ -1,1 +1,12 @@
-{ "name": "ds_sink_transactions_bronze" }
+{
+  "name": "ds_sink_transactions_bronze",
+  "properties": {
+    "linkedServiceName": { "referenceName": "AzureStorage_ls", "type": "LinkedServiceReference" },
+    "type": "DelimitedText",
+    "typeProperties": {
+      "location": { "type": "AzureBlobFSLocation", "fileSystem": "bronze", "folderPath": "transactions_raw/@{formatDateTime(utcnow(), 'yyyy/MM/dd')}" },
+      "columnDelimiter": ",",
+      "firstRowAsHeader": true
+    }
+  }
+}
