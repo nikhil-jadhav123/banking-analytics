@@ -1,1 +1,17 @@
-{ "name": "PL_Ingest_Transactions_To_Bronze" }
+{
+  "name": "PL_Ingest_Transactions_To_Bronze",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_Transactions",
+        "type": "Copy",
+        "typeProperties": {
+          "source": { "type": "DelimitedTextSource" },
+          "sink": { "type": "DelimitedTextSink" }
+        },
+        "inputs": [{ "referenceName": "ds_bronze_transactions", "type": "DatasetReference" }],
+        "outputs": [{ "referenceName": "ds_sink_transactions_bronze", "type": "DatasetReference" }]
+      }
+    ]
+  }
+}
