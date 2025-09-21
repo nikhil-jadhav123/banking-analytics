@@ -1,1 +1,12 @@
-{ "name": "ds_bronze_customer_master" }
+{
+  "name": "ds_bronze_customer_master",
+  "properties": {
+    "linkedServiceName": { "referenceName": "AzureStorage_ls", "type": "LinkedServiceReference" },
+    "type": "DelimitedText",
+    "typeProperties": {
+      "location": { "type": "AzureBlobFSLocation", "fileSystem": "bronze", "folderPath": "customer_master", "fileName": "customer_master.csv" },
+      "columnDelimiter": ",",
+      "firstRowAsHeader": true
+    }
+  }
+}
