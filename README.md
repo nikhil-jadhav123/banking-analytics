@@ -6,7 +6,7 @@ This project provides a robust, end-to-end data pipeline solution built on the M
 
 The core principle of this project is the Medallion Architecture, which organizes data into three logical layers: Bronze (raw), Silver (cleaned), and Gold (analytics-ready). This approach ensures data quality, governance, and a clear separation of concerns for each stage of the data lifecycle.
 
-Key Features
+**Key Features**
 Automated Ingestion: Scalable data ingestion from source systems to the Bronze layer using Azure Data Factory (ADF).
 
 Data Transformation: A powerful, distributed data processing layer built on Azure Databricks with PySpark for cleaning, standardizing, and enriching raw data.
@@ -17,10 +17,10 @@ CI/CD Pipeline: Automated testing and deployment workflows using GitHub Actions 
 
 Comprehensive Documentation: Detailed guides for architecture, data dictionary, and operational procedures.
 
-Architecture
+**Architecture**
 This project is built on the Medallion Architecture, a data engineering design pattern that provides a structured approach for processing data. It organizes data into three distinct layers: Bronze, Silver, and Gold, ensuring data quality, reliability, and accessibility.
 
-Bronze Layer (Raw Data Lake)
+**Bronze Layer (Raw Data Lake)**
 Purpose: This is the entry point for all raw data. It serves as an immutable, append-only historical record.
 
 Data: Contains raw, untransformed data ingested directly from source systems (e.g., transaction logs from core banking, customer master data).
@@ -35,7 +35,7 @@ This layer is critical for data archival and auditing.
 
 In this project: The transactions.csv and customer_master.csv files are initially ingested into this layer.
 
-Silver Layer (Cleaned & Conformed Data Lake)
+**Silver Layer (Cleaned & Conformed Data Lake)**
 Purpose: This layer contains trusted data that has been cleaned, validated, and enriched. It acts as a single source of truth for the organization.
 
 Data: Raw data from the Bronze layer is transformed here.
@@ -59,7 +59,7 @@ Serves as the foundation for analytical and machine learning tasks.
 
 In this project: The Databricks notebooks (NB_Customer_Bronze_To_Silver.py and NB_Transactions_Bronze_To_Silver.py) perform the transformations to create the tables in this layer.
 
-Gold Layer (Curated & Aggregated Data Warehouse)
+**Gold Layer (Curated & Aggregated Data Warehouse)**
 Purpose: This is the final layer, providing curated, aggregated, and highly optimized data for reporting and business intelligence.
 
 Data: Contains business-level aggregations and pre-calculated metrics from the Silver layer.
@@ -72,7 +72,7 @@ Queries are fast and efficient as complex joins and aggregations are pre-compute
 
 In this project: Azure Synapse Analytics views and tables are used to create the Gold layer, which is directly consumed by the Power BI dashboard.
 
-Data Dictionary
+**Data Dictionary**
 This section provides a detailed breakdown of the data schemas for the primary datasets used in this project.
 
 File customer_master.csv:
@@ -101,7 +101,7 @@ transactions.csv:
 | TransactionTime | String | Time of the transaction (HH:MM:SS) |
 | TransactionType | String | Type of transaction (Deposit, Withdrawal, Transfer, Payment) |
 ----------------------------------------------------------------------------------
-Analytics Layer (Gold) SQL Scripts
+**Analytics Layer (Gold) SQL Scripts**
 The following SQL scripts are used to create the analytics-ready Gold layer in Azure Synapse Analytics, leveraging the data in the Silver layer.
 
 serverless_external_views.sql
@@ -130,7 +130,7 @@ FactTransaction
 
 
 
-Power BI Reports & Analytics
+**Power BI Reports & Analytics**
 This project's Gold layer is designed to be consumed by Power BI for business intelligence and reporting. You can connect directly to the Synapse views to build powerful, interactive dashboards.
 
 Power BI Guide
@@ -144,7 +144,7 @@ vw_MonthlyCustomerSpending
 
 vw_FraudulentTransactionSummary
 
-Build Dashboards:
+**Build Dashboards:**
 
 Customer 360: Create visualizations covering demographics, top customers, and account activity.
 
@@ -152,7 +152,7 @@ Transaction Activity: Use charts to show transaction volume, type breakdowns, an
 
 Fraud Monitoring: Build a dashboard to track fraudulent transactions by count, amount, date, location, and merchant.
 
-Power BI Dashboards
+**Power BI Dashboards**
 Operations
 Scheduling: Use ADF triggers for daily or hourly ingestion and post-ingestion transformations.
 
@@ -167,7 +167,7 @@ Access Control: Implement Role-Based Access Control (RBAC) on storage containers
 
 Data Handling: This project uses a synthetic dataset with no real PII (Personally Identifiable Information). For real-world applications, ensure sensitive data is pseudonymized or tokenized, and apply strict data access policies.
 
-Project Structure
+**Project Structure**
 This repository is organized to logically separate different components of the data platform.
 
 
@@ -215,7 +215,7 @@ docs/: This is a critical folder. It contains detailed documentation on various 
 Getting Started
 Follow these steps to set up and run the data pipeline.
 
-Prerequisites
+**Prerequisites**
 An Azure Subscription.
 
 Git installed on your machine.
@@ -254,7 +254,7 @@ Upload the customer_master.csv and transactions.csv from the data/sample/ direct
 
 Alternatively, run the generate_synthetic_data.py script to generate new data.
 
-Orchestration with Azure Data Factory:
+**Orchestration with Azure Data Factory:**
 
 Import the JSON files from the adf/ directory into your Azure Data Factory workspace.
 
@@ -276,7 +276,7 @@ fact_load_from_silver.sql (can be configured to run as part of the ADF pipeline)
 
 gold_views.sql
 
-Further Documentation
+**Further Documentation**
 For more in-depth information, please refer to the documents in the docs/ folder:
 
 Architecture: docs/architecture.md
@@ -290,5 +290,5 @@ Operations & Monitoring: docs/operations.md
 Security & Governance: docs/security_and_governance.md
 
 
-License
+**License**
 This project is licensed under the MIT License. See the LICENSE file for details.
