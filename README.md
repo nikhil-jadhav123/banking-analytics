@@ -1,6 +1,7 @@
 # Enterprise Banking Customer Transaction Analytics (Azure • Medallion)
 
-Project Overview
+**Project Overview**
+
 This project provides a robust, end-to-end data pipeline solution built on the Microsoft Azure data stack. It is designed to ingest raw financial transaction data, transform it into a clean and structured format, and finally, present it in a performant, analytics-ready layer.
 
 The core principle of this project is the Medallion Architecture, which organizes data into three logical layers: Bronze (raw), Silver (cleaned), and Gold (analytics-ready). This approach ensures data quality, governance, and a clear separation of concerns for each stage of the data lifecycle.
