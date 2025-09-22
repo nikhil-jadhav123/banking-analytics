@@ -100,6 +100,7 @@ transactions.csv:
 | TransactionDate | Date | Date of the transaction (YYYY-MM-DD) |
 | TransactionTime | String | Time of the transaction (HH:MM:SS) |
 | TransactionType | String | Type of transaction (Deposit, Withdrawal, Transfer, Payment) |
+----------------------------------------------------------------------------------
 Analytics Layer (Gold) SQL Scripts
 The following SQL scripts are used to create the analytics-ready Gold layer in Azure Synapse Analytics, leveraging the data in the Silver layer.
 
