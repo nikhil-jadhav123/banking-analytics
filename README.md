@@ -170,7 +170,7 @@ Data Handling: This project uses a synthetic dataset with no real PII (Personall
 Project Structure
 This repository is organized to logically separate different components of the data platform.
 
-.
+
 ├── .github/workflows/          # CI/CD workflows for automation
 │   └── ci.yml
 ├── requirements.txt            # Python dependencies for Databricks notebooks
